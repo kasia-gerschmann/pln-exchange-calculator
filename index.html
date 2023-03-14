@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+
+        <script type="module"
+                src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+                nomodule=""
+                src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+        ></script>
+
+        <link rel="stylesheet" href="general.css"/>
+        <link rel="stylesheet" href="queries.css"/>
+        <script type="module" defer src="script.js"></script>
+        <title>Przelicznik walut</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Przelicznik walut </h1>
+                <p>
+                    <ion-icon class="header-icon" name="cash-outline"></ion-icon>
+                </p>
+
+            </header>
+            <section>
+                <form class="container grid grid--3-cols">
+                    <div class="user-input--amount">
+                        <label for="amount">Wprowadź kwotę (PLN)</label>
+                        <input
+                                id="amount"
+                                type="number"
+                                placeholder="PLN"
+                                name="amount"
+                                step="0.01"
+                                required
+                        /></div>
+                    <div class="user-input--currency">
+                        <label for="currency">Wybierz walutę</label>
+                        <select id="currency" onchange="convert()" name="currency" required>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="CHF">CHF</option>
+                        </select></div>
+                    <button class="btn" type="button" onclick="convert()">Przelicz</button>
+                </form>
+            </section>
+            <div class="result-container">
+                <h3 id="result"></h3>
+                <div id="loader" class="hidden">
+                    <div class="lds-dual-ring"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

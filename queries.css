@@ -1,0 +1,52 @@
+@media (max-width: 80rem) {
+    .result-container {
+        font-size: 3.6rem;
+    }
+
+}
+
+@media (max-width: 59em) {
+    .grid--3-cols {
+        grid-template-columns: 1fr;
+        row-gap: 4.6rem;
+    }
+
+    .result-container {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 34em) {
+    .container {
+        padding: 0 3.2rem;
+    }
+
+    .grid {
+        margin-bottom: 1.2rem;
+    }
+
+    .grid--3-cols {
+        row-gap: 3.2rem;
+    }
+
+    header {
+        font-size: 3.2rem;
+    }
+
+    .result-container {
+        font-size: 2.4rem;
+        margin: 3.6rem;
+        display: flex;
+        align-content: center;
+    }
+
+    .btn {
+        margin-top: 0.2rem;
+    }
+
+    .user-input--amount:hover,
+    .user-input--currency:hover {
+        transform: scale(1.1);
+        transition: all 0.7s;
+    }
+}
