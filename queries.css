@@ -2,7 +2,9 @@
     .result-container {
         font-size: 3.6rem;
     }
-
+    .btn--container {
+        text-align: center;
+    }
 }
 
 @media (max-width: 59em) {
@@ -30,7 +32,7 @@
     }
 
     header {
-        font-size: 3.2rem;
+        font-size: 2.6rem;
     }
 
     .result-container {
@@ -40,6 +42,7 @@
         align-content: center;
     }
 
+
     .btn {
         margin-top: 0.2rem;
     }
@@ -48,5 +51,12 @@
     .user-input--currency:hover {
         transform: scale(1.1);
         transition: all 0.7s;
+    }
+
+
+    .user-input--amount:hover,
+    .user-input--currency:hover,
+    .btn:hover {
+        transform: scale(1);
     }
 }
