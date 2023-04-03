@@ -21,7 +21,7 @@ const convert = async () => {
             .toLocaleString(navigator.language, {style: "currency", currency: currencyInput.value});
         result.textContent = `${formattedLocalAmount} = ${formattedForeignAmount}`;
     } catch (err) {
-        prompt('Spróbuj później');
+        alert('Spróbuj później');
     } finally {
         loader.classList.add("hidden");
     }
