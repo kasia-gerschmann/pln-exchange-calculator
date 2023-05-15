@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,13 +19,13 @@
         <link rel="stylesheet" href="general.css"/>
         <link rel="stylesheet" href="queries.css"/>
         <script type="module" defer src="script.js"></script>
-        <title>Przelicznik walut</title>
+        <title>Currency converter</title>
 
     </head>
     <body>
         <div class="container">
             <header>
-                <h1>Przelicznik walut </h1>
+                <h1>Currency converter </h1>
                 <p class="text-center">
                     <ion-icon class="header-icon" name="cash-outline"></ion-icon>
                 </p>
@@ -34,7 +34,7 @@
             <section>
                 <form name="myForm" novalidate class="container grid grid--3-cols">
                     <div class="user-input--amount">
-                        <label for="amount">Wprowadź kwotę (PLN)</label>
+                        <label for="amount">Amount to exchange (PLN)</label>
                         <input
                                 id="amount"
                                 type="number"
@@ -46,7 +46,7 @@
                         <div class="error" id="amountError"></div>
                     </div>
                     <div class="user-input--currency">
-                        <label for="currency">Wybierz walutę</label>
+                        <label for="currency">Select currency</label>
                         <select id="currency" name="currency" onchange="onCurrencyChange()" required>
                             <option value="EUR">EUR</option>
                             <option value="USD">USD</option>
@@ -54,7 +54,7 @@
                         </select>
                     </div>
                     <div class="btn--container">
-                        <button class="btn no-pointer-events" type="button" onclick="convert()" id="convertButton">Przelicz</button>
+                        <button class="btn no-pointer-events" type="button" onclick="convert()" id="convertButton">Calculate</button>
                     </div>
                 </form>
             </section>
